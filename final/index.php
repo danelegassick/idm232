@@ -29,23 +29,24 @@ if(!$results) {
     die('Database query failed. ' . mysqli_error($connection));
 } 
 
-while ($user = mysqli_fetch_array($results)) {
-    echo '<pre>';
-    var_dump($user);
-    echo '</pre>';
+// while ($user = mysqli_fetch_array($results)) {
+//     echo '<pre>';
+//     var_dump($user);
+//     echo '</pre>';
 
-    echo '<hr>';
+//     echo '<hr>';
 
-    echo '<h2>' . $user['first_name'] . ' ' . $user['last_name'] . '</h2>';
+//     echo '<h2>' . $user['first_name'] . ' ' . $user['last_name'] . '</h2>';
 
-    echo '<hr>';
-}
+//     echo '<hr>';
+// }
 
 ?>
 
-<?php $assignment_one = 'Assignment - 01'; ?>
+<div class="padding-top">
+    <h1>Hi Prof, my recipe details are in the nav-bar (know it says to have them on index, but im trying to keep everything segmented right now.</h1>
+</div>
 
-<h1><?php echo $assignment_one; ?></h1>
     
 <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/final/components/footer.php'; 
  ?>
