@@ -1,37 +1,14 @@
+
 <?php
-// How to include files dynamically:
-// include_once $_SERVER['DOCUMENT_ROOT'] . '/final/components/example.php';  
-
-$page_name = 'Home';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/final/components/header.php'; 
-
-$db_host = 'localhost';
-  $db_user = 'root';
-  $db_password = 'root';
-  $db_name = 'local_idm232';
-
-$connection = mysqli_connect($db_host, $db_user, $db_password, $db_name);
-
-	
-if (mysqli_connect_errno()) {
-    die('Database connection failed: ' .
-        mysqli_connect_error() . 
-        ' (' . mysqli_connect_errno . ')'
-    );
-}
-
-//Read the data from the database from the users table
-
-$query = 'SELECT * FROM users';
-$results = mysqli_query($connection, $query);
-
-if(!$results) {
-    die('Database query failed. ' . mysqli_error($connection));
-} 
-
+// Make sure the path is correct for each include on this page. Delete this comment once done
+include_once __DIR__ . '/app.php';
+$page_title = 'Recipe Details';
+include_once __DIR__ . '/_components/header.php';
 ?>
 
-<div class="hero-img"></div>
+<!-- MAIN CONTENT GOES HERE -->
+
+<div class="hero-img" style="background-image: url(<?php echo site_url(); ?>/dist/images/hero-img.png);"></div>
 
 <div class="container">
 
@@ -99,6 +76,4 @@ if(!$results) {
 
 </div>
 
-    
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/final/components/footer.php'; 
- ?>
+<?php include_once __DIR__ . '/_components/footer.php';

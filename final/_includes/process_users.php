@@ -1,22 +1,10 @@
 <?php 
 
+include_once __DIR__ . '/../app.php';
+$page_title = 'Process Users';
+include_once __DIR__ . '/../_components/header.php';
 
 //Get values from $_POST and insert into database
-
-$db_host = 'localhost';
-  $db_user = 'root';
-  $db_password = 'root';
-  $db_name = 'local_idm232';
-
-$connection = mysqli_connect($db_host, $db_user, $db_password, $db_name);
-
-	
-if (mysqli_connect_errno()) {
-    die('Database connection failed: ' .
-        mysqli_connect_error() . 
-        ' (' . mysqli_connect_errno . ')'
-    );
-}
 
 echo '<pre>';
 var_dump($_POST);
@@ -28,7 +16,7 @@ $email = $_POST['email'];
 $phone = $_POST['phone'];
 
 $query = "INSERT INTO users (first_name, last_name, email, phone) VALUES ('$first_name', '$last_name', '$email', '$phone')";
-$query_results = mysqli_query($connection, $query);
+$query_results = mysqli_query($db_connection, $query);
 
 if ($query_results) {
     //Success
@@ -38,11 +26,11 @@ if ($query_results) {
     echo 'EPIC FAIL';
 }
 
-
-
-
-
-
-
-
 ?>
+
+
+
+
+
+
+<?php include_once __DIR__ . '/../_components/footer.php';?>

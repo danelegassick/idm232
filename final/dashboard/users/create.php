@@ -1,26 +1,31 @@
 <?php
-$page_name = 'Create User';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/final/components/header.php'; 
-
-// echo '<pre>';
-// var_dump($_SERVER);
-// echo '</pre>';
-
+// Make sure the path is correct for each include on this page. Delete this comment once done
+include_once __DIR__ . '/../../app.php';
+$page_title = 'Create';
+include_once __DIR__ . '/../../_components/header.php';
 ?>
 
 <h2>Create a user</h2>
-    <form action="<?php echo site_url(); ?>/includes/process_users.php" method="POST">
-        <label for="">First Name</label>
+    <form action="<?php echo site_url(); ?>/_includes/process_users.php" method="POST">
+        <label for="">First Name:</label>
         <input type="text" name="first_name">
+        <br>
+        <br>
 
-        <label for="">Last Name</label>
+        <label for="">Last Name:</label>
         <input type="text" name="last_name">
+        <br>
+        <br>
 
-        <label for="">Email</label>
+        <label for="">Email:</label>
         <input type="text" name="email">
+        <br>
+        <br>
 
-        <label for="">Phone Number</label>
+        <label for="">Phone Number:</label>
         <input type="text" name="phone">
+        <br>
+        <br>
         
         <input type="submit" value="Submit">
     </form>
@@ -29,5 +34,4 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/final/components/header.php';
 
 
 
-
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/final/components/footer.php';  ?>
+<?php include_once __DIR__ . '/../../_components/footer.php';

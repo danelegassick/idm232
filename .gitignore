@@ -26,6 +26,9 @@
 *.log
 *.sql
 *.sqlite
+*.env.php
+*.env.local.php
+*.env.production.php
 
 # OS generated files #
 ######################

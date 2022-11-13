@@ -45,6 +45,10 @@ header {
     z-index: 999;
 }
 
+main {
+  padding-top: 80px;
+}
+
 .btn {
     height: fit-content;
     width: 100px;
@@ -188,7 +192,7 @@ header {
 
 .hero-img {
     height: 400px;
-    background-image: url(/final/dist/graphics/hero-img.png);
+    background-image: url(/final/dist/images/hero-img.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -332,4 +336,33 @@ header {
   .padding-top {
     padding: 8rem;
   }
+
+  .container {
+    max-width: 1200px;
+    margin: 1rem auto;
+  }
   
+  /* TABLE STYLES */
+
+  .data-table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 15px 0;
+    width: 100%;
+    max-width: 1200px;
+  }
+
+  td, th {
+    border-collapse: collapse;
+    border: 1px solid var(--background-dark);
+    margin: 0;
+    padding: 1rem;
+    vertical-align: top;
+  }
+
+
+thead:first-child {
+      background-color: #e2e2e2;
+      color: var(--text-dark);
+      font-size: 1.25rem;
+    }
