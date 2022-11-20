@@ -3,7 +3,7 @@
     $main_navigation = [
         [
             'title' => 'search',
-            'url' => site_url() . '/search.php'
+            'url' => site_url() . '/admin/search'
         ],
         [
             'title' => 'categories',
@@ -11,7 +11,7 @@
         ],
         [
             'title' => 'my recipes',
-            'url' => site_url() . '/categories.php'
+            'url' => site_url() . '/admin/recipes'
         ],
         [
             'title' => 'account',

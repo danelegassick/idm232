@@ -12,6 +12,11 @@ $recipes = get_recipes();
       <div>
         <h1>Recipes</h1>
         <p>A list of all the recipes in your site including their title, overview, ingredients and instructions.</p>
+        <form action="<?php echo site_url();?>/admin/search" method="GET">
+          <input type = "text" name="search" id="search" placeholder="Search">
+          <button type="submit">Search</button>
+        </form>
+        <br>
         <?php
         // If error query param exist, show error message
           if (isset($_GET['error'])) {
