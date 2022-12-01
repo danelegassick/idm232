@@ -39,6 +39,13 @@ if ($result->num_rows > 0) {
               </div>
 
               <div>
+                <label for="img_path"><h3>Image Path</h3></label>
+                <br>
+                <input type="text" name="img_path"
+                  value="<?php echo $recipe['img_path']?>">
+              </div>
+
+              <div>
                 <label for="overview"><h3>Overview</h3></label>
                 <textarea name="overview" id="" cols="30" rows="10"><?php echo $recipe['overview']?></textarea>
               </div>

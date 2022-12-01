@@ -13,6 +13,12 @@ include_once __DIR__ . '/../../_components/header.php';
         <br>
         <br>
 
+        <label for="">Image Path:</label>
+        <br>
+        <input type="text" name="img-path">
+        <br>
+        <br>
+
         <label for="">Overview:</label>
         <br>
         <textarea name="overview" id="" cols="30" rows="10"></textarea>

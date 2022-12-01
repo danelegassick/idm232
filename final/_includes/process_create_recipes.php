@@ -11,12 +11,13 @@ var_dump($_POST);
 echo '</pre>';
 
 $title = $_POST['title'];
+$img_path= $_POST['img_path'];
 $overview= $_POST['overview'];
 $ingredients = $_POST['ingredients'];
 $instructions = $_POST['instructions'];
 
-$query = "INSERT INTO recipes (title, overview, ingredients, instructions)"; 
-$query .= " VALUES ('$title', '$overview', '$ingredients', '$instructions')";
+$query = "INSERT INTO recipes (title, img_path, overview, ingredients, instructions)"; 
+$query .= " VALUES ('$title', '$img_path', '$overview', '$ingredients', '$instructions')";
 $query_results = mysqli_query($db_connection, $query);
 
 if ($query_results) {

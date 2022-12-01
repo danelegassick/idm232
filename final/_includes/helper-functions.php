@@ -27,9 +27,13 @@ function site_url()
  * Redirect to any path
  * @param  string $path - The path to redirect to
  */
+
 function redirect_to($path)
 {
-    header('Location: ' . site_url() . $path);
+    $full_url = site_url() . $path;
+    // Bluehost doesn't like when you use header() to redirect so we'll use JS instead
+    // header('Location: ' . $full_url);
+    echo "<script>window.location = '$full_url';</script>";
     exit;
 }
 
@@ -53,3 +57,16 @@ function getFormattedDateTime()
     return  date('Y-m-d H:i:s');
 }
 
+function sanitize_value($value)
+{
+    global $db_connection;
+    return mysqli_real_escape_string($db_connection, $value);
+}
+
+/**
+ * Check if user is logged in via session
+ */
+function is_user_logged_in()
+{
+    return isset($_SESSION['user']);
+}

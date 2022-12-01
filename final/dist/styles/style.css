@@ -191,7 +191,7 @@ main {
 } */
 
 .hero-img {
-    height: 400px;
+    height: 500px;
     background-image: url(/final/dist/images/hero-img.png);
     background-position: center;
     background-size: cover;
@@ -214,11 +214,11 @@ main {
     padding-top: 1rem;
 }
 
-.container {
+/* .container {
     margin: auto;
     max-width: 800px;
     padding: 0 1rem;
-}
+} */
 
 .blurb-correction {
     position: relative;
@@ -338,8 +338,9 @@ main {
   }
 
   .container {
-    max-width: 1200px;
+    max-width: 800px;
     margin: 1rem auto;
+    padding: 0 1rem;
   }
   
   /* TABLE STYLES */
@@ -366,3 +367,76 @@ thead:first-child {
       color: var(--text-dark);
       font-size: 1.25rem;
     }
+
+.table-img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 5px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.recipe-block {
+  margin: 3rem 0;
+}
+
+.recipe-block-grid {
+  display: grid;
+  grid-template-columns: 25fr 75fr;
+  gap: 2rem
+}
+
+.recipe-block-text h2 {
+  margin-top: 0;
+}
+
+.link {
+	color: var(--text-dark);
+	background-image: linear-gradient(to bottom, transparent 65%, var(--theme-acc-2) 0);
+	background-size: 0% 100%;
+	background-repeat: no-repeat;
+	text-decoration: none;
+	transition: background-size .4s ease;
+}
+
+.link:hover {
+	background-size: 100% 100%;
+	cursor: pointer;
+}
+
+.link-red {
+	color: var(--text-dark);
+	background-image: linear-gradient(to bottom, transparent 65%, rgb(240, 78, 116) 0);
+	background-size: 0% 100%;
+	background-repeat: no-repeat;
+	text-decoration: none;
+	transition: background-size .4s ease;
+}
+
+.link-red:hover {
+	background-size: 100% 100%;
+	cursor: pointer;
+}
+
+.button {
+  background-color: var(--theme-col); 
+  border-radius: 5px;
+  padding: 1rem;
+  border: solid 1px var(--theme-col);
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+}
+
+.button:hover {
+  background-color: white; /* white */
+  border: solid 1px var(--theme-col);
+  color: var(--theme-col);
+}
+
+.button a{
+  text-decoration: none;
+  color: unset;
+}

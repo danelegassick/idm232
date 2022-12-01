@@ -28,6 +28,8 @@ if ($results->num_rows > 0) {
 
 ?>
 
+<div class="container">
+
 <div class="mx-auto my-16 max-w-7xl px-4">
   <div class="px-4 sm:px-6 lg:px-8">
     <!-- <?php include __DIR__ . '/../../_components/navigation-admin.php'; ?> -->
@@ -37,7 +39,7 @@ if ($results->num_rows > 0) {
         <form action="<?php echo site_url(); ?>/admin/search" method="GET">
           <input class=" border-black border-2" type="text" name="search" id="search" placeholder="Search"
             value="<?php echo $search; ?>">
-          <button type="submit">Search</button>
+          <button class="button" type="submit">Search</button>
         </form>
         <h2>You searched for "<?php echo $search; ?>"</h2>
         <?php
@@ -53,25 +55,36 @@ if ($results->num_rows > 0) {
   }?>
       </div>
       <div class="mt-4 sm:mt-0 sm:ml-16 sm:flex-none">
-        <button type="button"
-          class="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:w-auto">
+        <button type="button" class="button">
           <a href="<?php echo site_url() . '/admin/recipes/create_recipes.php' ?>">
             Add service</a></button>
       </div>
     </div>
 
     <?php
+
+    $site_url = site_url();
+
     // If we have results, show them
       if ($recipes_results) {
           while ($recipes_results = mysqli_fetch_assoc($results)) {
-              echo '<div class="flex flex-row justify-center items-center">';
-              echo '<h2>' . $recipes_results['title'] . '</h2>';
-              echo '<p>' . $recipes_results['overview'] . '<p>';
-              echo '<p>' . $recipes_results['ingredients'] . '<p>';
-              echo '</div>';
+              echo "
+              <div class='recipe-block'>
+              <div class='recipe-block-grid'>
+                <img src='{$site_url}{$recipes_results['img_path']}' class='table-img'>
+                <div class='recipe-block-text'>
+                  <h2><a class='link' href='{$site_url}/admin/recipes/recipe-details.php?id={$recipes_results['id']}'>{$recipes_results['title']}</a></h2>
+                  <p>{$recipes_results['overview']}</p>
+                  <a class='link' href='{$site_url}/admin/recipes/edit_recipes.php?id={$recipes_results['id']}'>Edit</a>
+                  <a class='link-red' href='{$site_url}/admin/recipes/delete_recipes.php?id={$recipes_results['id']}'>Delete</a>
+                </div>
+              </div>
+            </div>
+            <hr>";
           }
       }
 ?>
+</div>
 
   </div>
 </div>

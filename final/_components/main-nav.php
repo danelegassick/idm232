@@ -22,10 +22,6 @@
             'url' => site_url() . '/dashboard/users/create.php'
         ],
         [
-            'title' => 'recipe details',
-            'url' => site_url() . "/recipe-details.php"
-        ],
-        [
             'title' => 'create recipes',
             'url' => site_url() . "/admin/recipes/create_recipes.php"
         ],
