@@ -51,13 +51,13 @@ if ($results->num_rows > 0) {
         <?php
 // If error query param exist, show error message
   if (isset($_GET['error'])) {
-      echo '<p class="text-red-500">' . $_GET['error'] . '</p>';
+      echo '<p>' . $_GET['error'] . '</p>';
   }?>
       </div>
-      <div class="mt-4 sm:mt-0 sm:ml-16 sm:flex-none">
+      <div>
         <button type="button" class="button">
           <a href="<?php echo site_url() . '/admin/recipes/create_recipes.php' ?>">
-            Add service</a></button>
+            Add Recipe</a></button>
       </div>
     </div>
 

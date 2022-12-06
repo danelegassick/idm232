@@ -24,6 +24,7 @@ if ($result->num_rows > 0) {
     <div>
       <div>
         <h1>Edit Recipe</h1>
+        <br>
       </div>
     </div>
     <div>
@@ -31,34 +32,37 @@ if ($result->num_rows > 0) {
         <div>
           <div>
             <form action="<?php echo site_url(); ?>/_includes/process-edit-recipes.php" method="POST">
-              <div>
-                <label for="title"><h3>Title</h3></label>
-                <br>
-                <input type="text" name="title"
-                  value="<?php echo $recipe['title']?>">
+              <div class="input-field">
+              <input class="input-style" type="text" name="title"
+                  value="<?php echo $recipe['title']?>" id="title">
+                <label class="label-style-edit" for="title">Title</label>
               </div>
+              <br>
 
-              <div>
-                <label for="img_path"><h3>Image Path</h3></label>
-                <br>
-                <input type="text" name="img_path"
-                  value="<?php echo $recipe['img_path']?>">
+              <div class="input-field">
+              <input class="input-style" type="text" name="img_path"
+                  value="<?php echo $recipe['img_path']?>" id="img_path">
+                <label class="label-style-edit" for="img_path">Image Path</label>
               </div>
+              <br>
 
               <div>
                 <label for="overview"><h3>Overview</h3></label>
                 <textarea name="overview" id="" cols="30" rows="10"><?php echo $recipe['overview']?></textarea>
               </div>
+              <br>
               <div>
                 <label for="ingredients"><h3>Ingredients</h3></label>
                 <textarea name="ingredients" id="" cols="30" rows="10"><?php echo $recipe['ingredients']?></textarea>
               </div>
+              <br>
               <div>
                 <label for="instructions"><h3>Instructions</h3></label>
                 <textarea name="instructions" id="" cols="30" rows="10"><?php echo $recipe['instructions']?></textarea>
 
               </div>
-              <input type="submit" value="Submit">
+              <br>
+              <input class="button" type="submit" value="Submit">
 
               <input type="hidden" name="id" value="<?php echo $recipe['id']?>">
             </form>

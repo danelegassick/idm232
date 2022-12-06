@@ -6,11 +6,11 @@ if (!$_POST) {
 }
 
 // Store $_POST data to variables for readability
-$title_value = $_POST['title'];
-$img_value = $_POST['img_path'];
-$overview_value = $_POST['overview'];
-$ingredients_value = $_POST['ingredients'];
-$instructions_value = $_POST['instructions'];
+$title_value = sanitize_value($_POST['title']);
+$img_value = sanitize_value($_POST['img_path']);
+$overview_value = sanitize_value($_POST['overview']);
+$ingredients_value =sanitize_value($_POST['ingredients']);
+$instructions_value = sanitize_value($_POST['instructions']);
 $id_value = $_POST['id'];
 
 // Create a SQL statement to insert the data into the database

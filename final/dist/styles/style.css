@@ -440,3 +440,104 @@ thead:first-child {
   text-decoration: none;
   color: unset;
 }
+
+.input-field {
+  position: relative;
+  width: 250px;
+  height: 44px;
+  line-height: 44px;
+}
+.label-style {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: #d3d3d3;
+  transition: 0.2s all;
+  cursor: text;
+}
+.input-style {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid #d3d3d3;
+  box-shadow: none;
+  color: #111;
+}
+.input-style:invalid {
+  outline: 0;
+  /* color: #ff2300;
+  border-color: #ff2300; */
+}
+.input-style:focus { 
+  border-color: var(--theme-acc-2);
+}
+.input-style:focus~.label-style,
+.input-style:valid~.label-style {
+  font-size: 14px;
+  top: -24px;
+  color: var(--theme-acc-2);
+}
+
+.label-style-edit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: #d3d3d3;
+  transition: 0.2s all;
+  cursor: text;
+  font-size: 14px;
+  top: -24px;
+  color: var(--theme-acc-2);
+}
+
+.white-text {
+  color: white;
+}
+
+.section-grid-1 {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  height: 500px;
+}
+
+.section-text {
+  padding: 2rem;
+}
+
+.section-text h2 {
+  text-align: center;
+}
+
+.section-img {
+  width: 100%;
+  object-fit: cover;
+  background-position: center;
+}
+
+@media screen and (max-width: 700px) {
+  .section-grid-1 {
+    grid-template-columns: 1fr;
+  }
+  .section-grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.home-hero {
+  margin-top: -4rem;
+  height: 700px;
+  background-image:
+  linear-gradient(to bottom, rgba(255, 132, 0, 0.248), rgba(0, 0, 0, 0.52)), url(/final/dist/images/recipe-12.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.home-hero h1 {
+  font-size: 7rem;
+  padding-top: 250px;
+  text-align: center;
+}

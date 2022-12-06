@@ -3,23 +3,15 @@
     $main_navigation = [
         [
             'title' => 'search',
-            'url' => site_url() . '/admin/search'
-        ],
-        [
-            'title' => 'categories',
-            'url' => site_url() . '/categories.php'
-        ],
-        [
-            'title' => 'my recipes',
-            'url' => site_url() . '/admin/recipes'
-        ],
-        [
-            'title' => 'account',
-            'url' => site_url() . '/account.php'
+            'url' => site_url() . '/admin/search/search-general.php'
         ],
         [
             'title' => 'dashboard',
-            'url' => site_url() . '/dashboard/users/create.php'
+            'url' => site_url() . '/admin/recipes'
+        ],
+        [
+            'title' => 'recipes',
+            'url' => site_url() . '/recipes-list.php'
         ],
         [
             'title' => 'create recipes',
@@ -33,8 +25,8 @@
 <div class="nav-background">
     <nav>
       <div id="logo">
-        <a href="<?php echo site_url(); ?>/index.php">
-          <h1>sitename.</h1>
+        <a class='link white-text' href="<?php echo site_url(); ?>/index.php">
+          cookbook pro
         </a>
       </div>
       <ul class="nav_links">
@@ -43,7 +35,7 @@
                         if (isset($main_navigation)) {
                             // loop through navigation array and output html
                             foreach ($main_navigation as $item_array) {
-                                echo "<li class='no-styles'><a href='$item_array[url]'>$item_array[title]</a></li>";
+                                echo "<li class='no-styles'><a class='link white-text' href='$item_array[url]'>$item_array[title]</a></li>";
                             }
                         }
                         

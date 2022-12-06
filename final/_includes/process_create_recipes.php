@@ -10,11 +10,11 @@ echo '<pre>';
 var_dump($_POST);
 echo '</pre>';
 
-$title = $_POST['title'];
-$img_path= $_POST['img_path'];
-$overview= $_POST['overview'];
-$ingredients = $_POST['ingredients'];
-$instructions = $_POST['instructions'];
+$title = sanitize_value($_POST['title']);
+$img_path= sanitize_value($_POST['img_path']);
+$overview= sanitize_value($_POST['overview']);
+$ingredients = sanitize_value($_POST['ingredients']);
+$instructions = sanitize_value($_POST['instructions']);
 
 $query = "INSERT INTO recipes (title, img_path, overview, ingredients, instructions)"; 
 $query .= " VALUES ('$title', '$img_path', '$overview', '$ingredients', '$instructions')";

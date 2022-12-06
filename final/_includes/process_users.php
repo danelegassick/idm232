@@ -10,10 +10,10 @@ echo '<pre>';
 var_dump($_POST);
 echo '</pre>';
 
-$first_name = $_POST['first_name'];
-$last_name = $_POST['last_name'];
-$email = $_POST['email'];
-$phone = $_POST['phone'];
+$first_name = sanitize_value($_POST['first_name']);
+$last_name = sanitize_value($_POST['last_name']);
+$email = sanitize_value($_POST['email']);
+$phone = sanitize_value($_POST['phone']);
 
 $query = "INSERT INTO users (first_name, last_name, email, phone) VALUES ('$first_name', '$last_name', '$email', '$phone')";
 $query_results = mysqli_query($db_connection, $query);
