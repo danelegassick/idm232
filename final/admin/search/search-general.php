@@ -36,6 +36,7 @@ if ($results->num_rows > 0) {
     <div class="sm:flex sm:items-center">
       <div class="sm:flex-auto">
         <h1>Search Results</h1>
+        
         <form action="<?php echo site_url(); ?>/admin/search/search-general.php" method="GET">
           <input type="text" name="search" id="search" placeholder="Search"
             value="<?php echo $search; ?>">

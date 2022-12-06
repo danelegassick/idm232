@@ -1,5 +1,3 @@
-
-
 <?php
 include __DIR__ . '/../app.php';
 
@@ -12,18 +10,18 @@ $first_name_value = sanitize_value($_POST['first_name']);
 $last_name_value = sanitize_value($_POST['last_name']);
 $email_value = sanitize_value($_POST['email']);
 $phone_value = sanitize_value($_POST['phone']);
+$id_value = $_POST['id'];
 
-$result = add_user($first_name_value, $last_name_value, $email_value, $phone_value);
+// Create a SQL statement to insert the data into the database
+$query = "UPDATE users SET first_name = '{$first_name_value}', last_name = '{$last_name_value}', email = '{$email_value}', phone = '{$phone_value}' WHERE id = {$id_value}";
+
+// Run the SQL statement
+$result = mysqli_query($db_connection, $query);
 
 // Check there are no errors with our SQL statement
 if ($result) {
     redirect_to('/admin/users');
 } else {
-    $error_message = 'Sorry there was an error creating the user ' . mysqli_error($db_connection);
+    $error_message = 'User was not updated';
     redirect_to('/admin/users?error=' . $error_message);
 }
-
-
-
-
-?>

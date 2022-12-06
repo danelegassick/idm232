@@ -6,12 +6,20 @@
             'url' => site_url() . '/admin/search/search-general.php'
         ],
         [
+            'title' => 'admin recipes',
+            'url' => site_url() . '/admin/recipes'
+        ],
+        [
+            'title' => 'admin users',
+            'url' => site_url() . '/admin/users'
+        ],
+        [
             'title' => 'recipes',
             'url' => site_url() . '/recipes-list.php'
         ],
         [
-          'title' => 'login',
-          'url' => site_url() . "/auth/login.php"
+          'title' => 'logout',
+          'url' => site_url() . "/auth/logout.php"
       ],
     ];
 
@@ -24,8 +32,10 @@
         <a class='link white-text' href="<?php echo site_url(); ?>/index.php">
           cookbook pro
         </a>
+
       </div>
       <ul class="nav_links">
+        <li class="white-text no-styles">Hi <?php echo $_SESSION['user']['first_name']; ?>!</li>
         <?php
                         //check if main_navigation exists
                         if (isset($main_navigation)) {
