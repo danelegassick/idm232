@@ -537,7 +537,26 @@ thead:first-child {
 }
 
 .home-hero h1 {
-  font-size: 7rem;
+  font-size: 6.5rem;
   padding-top: 250px;
+  text-align: center;
+}
+
+.sign-in {
+  background-color: #f0f0f0;
+  min-width: 500px;
+  width: fit-content;
+  margin: auto;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+}
+
+.center {
+  width: fit-content;
+  margin: auto;
+}
+
+.hero-text {
+  margin-top: -3rem;
   text-align: center;
 }

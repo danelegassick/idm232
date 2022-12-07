@@ -4,20 +4,21 @@ $page_title = 'Home';
 include_once __DIR__ . '/_components/header.php';
 ?>
 
-<div class="home-hero">
-    <h1 class="white-text">CookBook Pro</h1>
+<div class="home-hero" style="
+  background-image: linear-gradient(to bottom, rgba(255, 132, 0, 0.248), rgba(0, 0, 0, 0.52)), url(<?php echo site_url(); ?>/dist/images/recipe-12.png);">
+    <div class="container">
+        <h1 class="white-text">CookBook Pro</h1>
+        <p class="white-text hero-text">
+            Cookbook Pro offers a wide variety of options when it comes to recipes at home. With the widest variety of options, you can ensure that your meal will be great.
+        </p>
+        <br>
+        <div class="center">
+            <a href="<?php echo site_url() . '/recipes-list.php';?>" class="button center">View All Recipes</a>
+        </div>
+    </div>
 </div>
 
-<div class="section-grid-1">
-    <div class="section-text">
-        <h2>Our Food</h2>
-        <hr class="section-hr">
-        <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima libero culpa nemo mollitia at inventore similique animi aperiam quos unde accusamus, obcaecati tempore atque, sunt saepe odit. Saepe, consequatur repellendus!
-        </p>
-    </div>
-    <div class="section-img" style="background-image: url(<?php echo site_url() . '/dist/images/recipe-1.png';?>);"></div>
-</div>
+
 
 
 

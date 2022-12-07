@@ -26,6 +26,7 @@ $document_title = $page_title . ' | ' . $site_title; // Home | IDM232
 
 
 <?php
+
   if (isset($_SESSION['user'])) {
     // echo 'Cool Menu Here' . $_SESSION['user']['first_name'];
     include __DIR__ . '/main-nav-login.php';

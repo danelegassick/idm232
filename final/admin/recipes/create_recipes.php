@@ -1,7 +1,7 @@
 <?php
 // Make sure the path is correct for each include on this page. Delete this comment once done
 include_once __DIR__ . '/../../app.php';
-$page_title = 'Create';
+$page_title = 'Create Recipe';
 include_once __DIR__ . '/../../_components/header.php';
 ?>
 <div class="container">

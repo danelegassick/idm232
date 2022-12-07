@@ -11,7 +11,7 @@ $recipes = get_recipes();
     <div>
       <div>
         <h1>Recipes</h1>
-        <p>A list of all the recipes in your site including their title, overview, ingredients and instructions.</p>
+        <p>A list of all the recipes in the site.</p>
         <form action="<?php echo site_url();?>/admin/search/search-general.php" method="GET">
           <input type = "text" name="search" id="search" placeholder="Search">
           <button class="button" type="submit">Search</button>

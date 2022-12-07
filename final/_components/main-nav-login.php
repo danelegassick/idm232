@@ -19,7 +19,7 @@
         ],
         [
           'title' => 'logout',
-          'url' => site_url() . "/auth/logout.php"
+          'url' => site_url() . '/auth/logout.php'
       ],
     ];
 
@@ -41,7 +41,7 @@
                         if (isset($main_navigation)) {
                             // loop through navigation array and output html
                             foreach ($main_navigation as $item_array) {
-                                echo "<li class='no-styles'><a class='link white-text' href='$item_array[url]'>$item_array[title]</a></li>";
+                                echo "<li class='no-styles'><a class='link white-text' href='{$item_array['url']}'>{$item_array['title']}</a></li>";
                             }
                         }
                         
